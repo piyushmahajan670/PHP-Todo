@@ -61,7 +61,7 @@ if(isset($_SESSION['username'])) {
               echo '<p class="text-red-500">Invalid Credentials</p>';
             }
           }
-          header("Location: user.php");
+          header("Location: todo.php");
           exit();
         }
         $conn->close();
