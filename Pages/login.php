@@ -21,7 +21,7 @@ if(isset($_SESSION['username'])) {
   <title>Login</title>
 </head>
 <body class="relative bg-[#fef8f8]">
-  <?php include "header.php" ?>
+  <?php include "../Components/header.php" ?>
   <div class="container mx-auto w-1/2  pt-20 ">
     <div class="bg-blue-100 rounded-t-lg py-4">
       <h2 class="ps-4 text-gray-600 text-xl font-semibold">Sign In</h2>
@@ -39,7 +39,7 @@ if(isset($_SESSION['username'])) {
         // adding the dbname 
         $dbname = 'login';
         // Include the database connection file
-        include "C:/Users/dell/Desktop/xampp/htdocs/test/testing/dbConnect.php";
+        include "C:/Users/dell/Desktop/xampp/htdocs/Todos/DbConnect/dbConnect.php";
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           // Validate form inputs

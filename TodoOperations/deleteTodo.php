@@ -1,6 +1,6 @@
 <?php
 $dbname="login";
-include "C:/Users/dell/Desktop/xampp/htdocs/Todos/dbConnect.php";
+include "C:/Users/dell/Desktop/xampp/htdocs/todos/DbConnect/dbConnect.php";
 session_start();
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
   $list = $_POST['list'];
@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
   
   $stmt->close();
   $conn->close();
-  header("Location: ./todo.php");
+  header("Location: ../Pages/todo.php");
   exit();
 
 }

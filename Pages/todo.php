@@ -9,7 +9,7 @@
 
   // Getting the user ID and store it in the session so use in todos
   $dbname = "login";
-  include "dbConnect.php";
+  include "C:/Users/dell/Desktop/xampp/htdocs/todos/DbConnect/dbConnect.php";
   $sql = "SELECT `ID` FROM `users` WHERE `Name` = ?";
   $stmt = $conn->prepare($sql);
   $stmt->bind_param("s", $_SESSION['username']);
@@ -83,7 +83,7 @@
     </script>
 </head>
 <body class="bg-[#fef8f8]">
-    <?php include "header.php"; ?>
+    <?php include "../Components/header.php"; ?>
     <div class="w-[50%] mx-auto">
         <h1 class="text-5xl text-center mt-10 font-semibold text-red-400">
           Welcome, <?php echo $_SESSION['username'];?><br><br>
@@ -103,12 +103,12 @@
                 <h5 class="text-base font-medium text-gray-500" id="displayText"><?php echo htmlspecialchars($row['List']);?></h5>
                 
                 <div class="flex items-center gap-2 justify-center" id="flex">
-                  <form action="editTodo.php" method="post" class="flex justify-between w-full gap-4 ">
+                  <form action="../TodoOperations/editTodo.php" method="post" class="flex justify-between w-full gap-4 ">
                     <input type="hidden" name="id" value="<?php echo htmlspecialchars($row['No.'])?>">
                   <input type="text" id="inputField" name="input" value="<?php echo htmlspecialchars($row['List']); ?>" style="display: none;" class="w-fulll h-10 outline-0 border-gray-600 border ps-2 rounded-md">
                     <button name="edit" class="text-base cursor-pointer hover:bg-red-400 p-2  hover:text-white font-medium hover:rounded-md" id="edit">Edit</button>
                   </form>
-                  <form action="deleteTodo.php" method="post">
+                  <form action="../TodoOperations/deleteTodo.php" method="post">
                     <input type="hidden" name="list" value="<?php echo htmlspecialchars($row['List']);?>">
                     <button name="delete" id="delete" class="text-base cursor-pointer hover:bg-red-400 p-2 hover:text-white font-medium hover:rounded-md">Delete</button>
                   </form>

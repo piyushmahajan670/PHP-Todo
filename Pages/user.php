@@ -14,7 +14,7 @@ if (isset($_SESSION['message'])) {
   unset($_SESSION['message']);
 }
 $dbname = "login";
-include "dbConnect.php";
+include "C:/Users/dell/Desktop/xampp/htdocs/Todos/DbConnect/dbConnect.php";
 
 $sql = "SELECT `ID`, `First Name`, `Name`, `Last Name`, `Phone Number`, `admin` FROM `users` WHERE `Name` = ?";
 $stmt = $conn->prepare($sql);
@@ -34,7 +34,7 @@ $users = $result->fetch_all(MYSQLI_ASSOC);
 <body class="bg-[#fef8f8]">
 
 <?php 
-include "header.php"; 
+include "../Components/header.php"; 
 if (count($users) > 0) {
   foreach ($users as $row) {
 ?>

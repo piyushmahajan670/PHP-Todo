@@ -9,7 +9,7 @@
 </head>
 
 <body class="bg-[#fef8f8]">
-  <?php include "header.php" ?>
+  <?php include "../Components/header.php" ?>
   <div class="container mx-auto w-1/2  pt-20 ">
     <div class="bg-blue-100 rounded-t-lg py-4">
       <h2 class="ps-4 text-gray-600 text-xl font-semibold">Sign Up</h2>
@@ -35,7 +35,7 @@
         <?php
         // adding the db file to connect
         $dbname = "login";
-        include "C:/Users/dell/Desktop/xampp/htdocs/test/testing/dbConnect.php";
+        include "C:/Users/dell/Desktop/xampp/htdocs/Todos/DbConnect/dbConnect.php";
 
         if ($_SERVER['REQUEST_METHOD'] === "POST") {
           $fname = $_POST['fname'] ?? '';
