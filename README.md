@@ -1,6 +1,6 @@
 # PHP CRUD Todo List Website
 
-This is a basic CRUD (Create, Read, Update, Delete) operation-based Todo List website built using PHP and MySQL. The project includes user authentication, Todo list management, and a student list with pagination functionality.
+This is a basic CRUD (Create, Read, Update, Delete) operation-based Todo List website built using PHP and MySQL. The project includes user authentication, Todo list management, and a student list with pagination functionality. I am just starting to learn php so i create this simple operational website 
 
 ## Features
 
