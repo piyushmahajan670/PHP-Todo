@@ -1,12 +1,15 @@
 <?php
   session_start();
-
+  if (!isset($_SESSION['username'])) {
+    $_SESSION['message'] = "You must logged in first";
+    header("Location: login.php");
+    exit();
+  }
   // Message for added successfully
   if (isset($_SESSION['message'])) {
     echo "<script>alert('" . $_SESSION['message'] . "');</script>";
     unset($_SESSION['message']);
   }
-
   // Getting the user ID and store it in the session so use in todos
   $dbname = "login";
   include "C:/Users/dell/Desktop/xampp/htdocs/todos/DbConnect/dbConnect.php";

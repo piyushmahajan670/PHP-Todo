@@ -1,5 +1,10 @@
 <?php
 session_start();
+if (!isset($_SESSION['username'])) {
+  $_SESSION['message'] = "You must logged in first";
+  header("Location: login.php");
+  exit();
+}
 // Message for added successfully
 if (isset($_SESSION['message'])) {
   echo "<script>alert('" . $_SESSION['message'] . "');</script>";

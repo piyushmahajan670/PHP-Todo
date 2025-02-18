@@ -1,5 +1,10 @@
 <?php
 session_start();
+if (!isset($_SESSION['username'])) {
+  $_SESSION['message'] = "You must logged in first";
+  header("Location: login.php");
+  exit();
+}
 $dbname="login";
 include "C:/Users/dell/Desktop/xampp/htdocs/Todos/DbConnect/dbConnect.php";
 

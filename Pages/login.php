@@ -46,8 +46,6 @@ if(isset($_SESSION['username'])) {
           if (!empty($_POST['username']) && !empty($_POST['password'])) {
             $username = $_POST['username'];
             $password = $_POST['password'];
-            $_SESSION['username'] = "$username";
-            $_SESSION['password'] = "$password";
             // writing sql query 
             $sql = "SELECT * FROM `users` WHERE `Name` = '$username' AND `Password` = '$password'";
 
@@ -56,12 +54,14 @@ if(isset($_SESSION['username'])) {
             // checking if the record found in the database
             if ($result->num_rows > 0) {
              $_SESSION['message'] = "Log In Successfully!";
-              
+              $_SESSION['username'] = "$username";
+              $_SESSION['password'] = "$password";
+              header("Location: todo.php");
             } else {
-              echo '<p class="text-red-500">Invalid Credentials</p>';
+              $_SESSION['message'] = "Invalid Credentials! Please try log in again";
+              header("Location: login.php");
             }
           }
-          header("Location: todo.php");
           exit();
         }
         $conn->close();
