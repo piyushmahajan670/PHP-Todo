@@ -28,7 +28,7 @@ if (isset($_SESSION['message'])) {
         <h2 class="ps-4 text-gray-600 text-xl font-semibold"> Enter the Student's Details </h2>
       </div>
       <div class="rounded-md bg-white p-4">
-        <form action="./student/Insert.php" method="post" class="px-3">
+        <form action="./student/Insert.php" method="post" class="px-3" enctype="multipart/form-data">
           <div class="grid grid-cols-2 gap-3 w-full">
             <div class="flex flex-col gap-2 w-full">
               <label class="text-lg text-gray-600 font-medium">Student Name</label>
@@ -40,15 +40,22 @@ if (isset($_SESSION['message'])) {
             </div>
             <div class="flex flex-col gap-2 pt-3 w-full">
               <label class="text-lg text-gray-600 font-medium">Gender</label>
-              <input type="text" name="gender" class="w-full outline-0 bg-blue-100 focus:bg-blue-200 p-2" required>
+              <select name="gender" class="w-full outline-0 bg-blue-100 p-2 focus:bg-blue-200">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
             </div>
             <div class="flex flex-col gap-2 pt-3 w-full">
               <label class="text-lg text-gray-600 font-medium">Qualification</label>
               <input type="text" name="qualification" class="w-full outline-0 bg-blue-100 focus:bg-blue-200 p-2" required>
             </div>
-            <div class="col-span-2 flex flex-col gap-2 pt-3 justify-center">
+            <div class="flex flex-col gap-2 pt-3 justify-center">
               <label class="text-lg text-gray-600 font-medium">Phone Number</label>
               <input type="number" class="w-full outline-0 bg-blue-100                focus:bg-blue-200 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none p-2" name="number" required>
+            </div>
+            <div class="flex flex-col gap-2 pt-3  w-full">
+              <label class="block text-lg font-medium text-gray-600 ">Upload file</label>
+              <input type="file" name="uploadfile" class=" w-full h-full  h-10 p-2 bg-blue-100 cursor-pointer">
             </div> 
             <div class="col-span-2 flex flex-col gap-2 pt-3 justify-center">
               <label class="text-lg text-gray-600 font-medium">Residence</label>

@@ -41,7 +41,7 @@ if (!isset ($_GET['page']) ) {
 $page_first_result = ($page - 1) * $results;
 
 // limiting the query to show specific entries
-$sql = "SELECT `Id`,`Name`,`Gender`,`Phone Number`,`Qualification`,`Residence`,`Age` FROM `student list`ORDER BY `Id` DESC LIMIT " . $page_first_result . ',' . $results ;
+$sql = "SELECT `Id`,`Name`,`Gender`,`Phone Number`,`Qualification`,`Residence`,`Age`, `Image` FROM `student list`ORDER BY `Id` DESC LIMIT " . $page_first_result . ',' . $results ;
 
 $stmt = $conn->prepare($sql);
 
@@ -72,6 +72,7 @@ $stmt->close();
       <table class="w-full text-sm text-left rtl:text-right shadow-md text-gray-500">
         <thead class="text-xs text-gray-700  uppercase bg-blue-100">
           <tr>
+            <th scope="col" class="px-6 py-3">Image</th>
             <th scope="col" class="px-6 py-3">Student name</th>
             <th scope="col" class="px-6 py-3">Age</th>
             <th scope="col" class="px-6 py-3">Gender</th>
@@ -85,7 +86,10 @@ $stmt->close();
             foreach($list as $li) {
           ?>
           <tr class="bg-white border-b border-gray-200">
-            <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"><?php echo htmlspecialchars($li['Name']);?></td>
+          <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+            <img src="./student/image/<?php echo htmlspecialchars($li['Image']);?>" class="w-20 h-20 object-cover"/>
+          </td>
+            <td class="px-6 py-4"><?php echo htmlspecialchars($li['Name']);?></td>
             <td class="px-6 py-4"><?php echo htmlspecialchars($li['Age']);?></td>
             <td class="px-6 py-4"><?php echo htmlspecialchars($li['Gender']);?></td>
             <td class="px-6 py-4"><?php echo htmlspecialchars($li['Phone Number']);?></td>

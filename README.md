@@ -15,7 +15,7 @@ This is a basic CRUD (Create, Read, Update, Delete) operation-based Todo List we
 
 3. **Student List with Pagination**
    - Displays a list of students in a table with pagination.
-   - Allows adding new student entries to the list.
+   - Allows adding new student entries to the list with image.
 
 ## Technologies Used
 - **Frontend**: HTML, CSS, TailwindCss
