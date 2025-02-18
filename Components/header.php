@@ -23,6 +23,9 @@
               <a href="todo.php" class="block py-2 font-medium">
                 Todos
               </a>
+              <a href="student.php" class="block py-2 font-medium">
+                Student List
+              </a>
             ';
           }
         ?>
