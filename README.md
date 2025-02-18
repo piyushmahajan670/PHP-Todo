@@ -1,40 +1,31 @@
-PHP CRUD Todo List Website
+# PHP CRUD Todo List Website
+
 This is a basic CRUD (Create, Read, Update, Delete) operation-based Todo List website built using PHP and MySQL. The project includes user authentication, Todo list management, and a student list with pagination functionality.
 
-Features
-User Authentication
+## Features
 
-User registration and login functionality.
+1. **User Authentication**
+   - User registration and login functionality.
+   - User information is stored in the MySQL database.
+   - Validates login credentials and displays basic user information upon successful login.
 
-User information is stored in the MySQL database.
+2. **Todo List Management**
+   - Users can add, edit, and delete their Todo items.
+   - Each user has their own separate Todo list.
 
-Validates login credentials and displays basic user information upon successful login.
+3. **Student List with Pagination**
+   - Displays a list of students in a table with pagination.
+   - Allows adding new student entries to the list.
 
-Todo List Management
+## Technologies Used
+- **Frontend**: HTML, CSS, Bootstrap
+- **Backend**: PHP
+- **Database**: MySQL
 
-Users can add, edit, and delete their Todo items.
+## Setup Instructions
 
-Each user has their own separate Todo list.
-
-Student List with Pagination
-
-Displays a list of students in a table with pagination.
-
-Allows adding new student entries to the list.
-
-Technologies Used
-Frontend: HTML, CSS, Bootstrap
-
-Backend: PHP
-
-Database: MySQL
-
-Setup Instructions
-Prerequisites
-PHP (version 7.0 or higher)
-
-MySQL
-
-Web server (e.g., Apache, Nginx)
-
-Composer (optional, for dependency management)
+### Prerequisites
+- PHP (version 7.0 or higher)
+- MySQL
+- Web server (e.g., Apache, Nginx)
+- Composer (optional, for dependency management)
