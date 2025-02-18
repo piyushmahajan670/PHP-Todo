@@ -18,7 +18,7 @@ This is a basic CRUD (Create, Read, Update, Delete) operation-based Todo List we
    - Allows adding new student entries to the list.
 
 ## Technologies Used
-- **Frontend**: HTML, CSS, Bootstrap
+- **Frontend**: HTML, CSS, TailwindCss
 - **Backend**: PHP
 - **Database**: MySQL
 
