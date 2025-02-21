@@ -55,8 +55,34 @@ if (isset($_SESSION['message'])) {
             </div>
             <div class="flex flex-col gap-2 pt-3  w-full">
               <label class="block text-lg font-medium text-gray-600 ">Upload file</label>
-              <input type="file" name="uploadfile" class=" w-full h-full  h-10 p-2 bg-blue-100 cursor-pointer">
+              <input type="file" name="uploadfile" class=" w-full h-full  h-10 p-2 bg-blue-100 cursor-pointer" required>
             </div> 
+            <div class="col-span-2 flex flex-col items-center gap-2 pt-3 justify-center">
+              <label class="text-lg text-gray-600 font-medium">Subject</label>
+              <div class="flex flex-wrap  gap-8">
+                <div class="flex items-center gap-1">
+                  <input type="checkbox" id="Maths" name="subject[]" class="h-4 w-4" value="Maths">
+                  <label for="Maths">Maths</label>
+                </div>
+                <div class="flex items-center gap-1">
+                  <input type="checkbox" id="Chemistry" name="subject[]" class="h-4 w-4" value="Chemistry">
+                  <label for="Chemistry">Chemistry</label>
+                </div>
+                <div class="flex items-center gap-1">
+                  <input type="checkbox" id="Physics" name="subject[]" class="h-4 w-4" value="Physics">
+                  <label for="Physics">Physics</label>
+                </div>
+                <div class="flex items-center gap-1">
+                  <input type="checkbox" id="English" name="subject[]" class="h-4 w-4" value="English">
+                  <label for="English">English</label>
+                </div>
+                <div class="flex items-center gap-1">
+                  <input type="checkbox" id="IT" name="subject[]" class="h-4 w-4" value="IT">
+                  <label for="IT">IT</label>
+                </div>
+              </div>
+
+            </div>
             <div class="col-span-2 flex flex-col gap-2 pt-3 justify-center">
               <label class="text-lg text-gray-600 font-medium">Residence</label>
               <textarea name="residence" class="bg-blue-100 resize-none focus:bg-blue-200 h-30 p-2 outline-0 w-full" id=""></textarea>
